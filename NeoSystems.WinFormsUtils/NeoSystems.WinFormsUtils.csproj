@@ -1,10 +1,10 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
-    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Configuration Condition=" '$(Configuration)' == '' ">Release</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>70fa2a77-65c8-40e6-9cfe-f341aa4dee26</ProjectGuid>
+    <ProjectGuid>{70FA2A77-65C8-40E6-9CFE-F341AA4DEE26}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>NeoSystems.WinFormsUtils</RootNamespace>
@@ -20,6 +20,8 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <DocumentationFile>bin\Debug\NeoSystems.WinFormsUtils.xml</DocumentationFile>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
@@ -28,26 +30,75 @@
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <DocumentationFile>bin\Release\NeoSystems.WinFormsUtils.xml</DocumentationFile>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="System"/>
-    
-    <Reference Include="System.Core"/>
-    <Reference Include="System.Xml.Linq"/>
-    <Reference Include="System.Data.DataSetExtensions"/>
-    
-    
-    <Reference Include="Microsoft.CSharp"/>
-    
-    <Reference Include="System.Data"/>
-    
-    <Reference Include="System.Net.Http"/>
-    
-    <Reference Include="System.Xml"/>
+    <Reference Include="NeoSystems.Tools, Version=0.0.3.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\neosystems.tools.0.0.3-alpha\lib\net452\NeoSystems.Tools.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Class1.cs" />
+    <Compile Include="AboutBox.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AboutBox.designer.cs" />
+    <Compile Include="AppUtils.cs" />
+    <Compile Include="CalibrationEntry.cs" />
+    <Compile Include="ControlUtils.cs" />
+    <Compile Include="DoubleBufferedListView.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Error.cs" />
+    <Compile Include="FormUtils.cs" />
+    <Compile Include="GenericListSelectionForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GenericListSelectionForm.Designer.cs" />
+    <Compile Include="GenericTextEntry.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GenericTextEntry.Designer.cs" />
+    <Compile Include="ImageUtils.cs" />
+    <Compile Include="Instrumentation.cs" />
+    <Compile Include="InstrumentationTextFailedException.cs" />
+    <Compile Include="ListBoxUtils.cs" />
+    <Compile Include="ListViewExtensions.cs" />
+    <Compile Include="ListViewUtils.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SelectErrorModeForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SelectErrorModeForm.Designer.cs" />
+    <Compile Include="SerialportSetupForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SerialportSetupForm.designer.cs" />
+    <Compile Include="StringListEditor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="StringListEditor.Designer.cs" />
+    <Compile Include="TextBoxUtils.cs" />
+    <Compile Include="WebBrowserExtensions.cs" />
+    <Compile Include="WindowsUtils.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="AboutBox.resx" />
+    <EmbeddedResource Include="SelectErrorModeForm.resx" />
+    <EmbeddedResource Include="SerialportSetupForm.resx" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
- </Project>
+</Project>
