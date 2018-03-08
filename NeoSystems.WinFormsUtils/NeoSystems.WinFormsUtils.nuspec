@@ -2,7 +2,7 @@
 <package >
   <metadata>
     <id>NeoSystems.WinFormsUtils</id>
-    <version>0.0.1-alpha</version>
+    <version>0.0.4-alpha</version>
     <title>NeoSystems.WinFormsUtils</title>
     <authors>armand</authors>
     <owners>armand</owners>
@@ -10,8 +10,8 @@
     <projectUrl>https://github.com/neosystemsptyltd/neosystems.winformsutils</projectUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>Neo Systems (Pty) Ltd Windows Forms Utilities</description>
-    <releaseNotes>First alpha release.</releaseNotes>
-    <copyright>Copyright 2017</copyright>
+    <releaseNotes>Textbox write/writeln added.</releaseNotes>
+    <copyright>Copyright 2018</copyright>
     <tags>dialogs listview textbox serialport controls utils</tags>
   </metadata>
 </package>

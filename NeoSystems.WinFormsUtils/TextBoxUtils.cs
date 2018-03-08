@@ -217,5 +217,25 @@ namespace NeoSystems.WinFormsUtils
         {
             return LockWindowUpdate(IntPtr.Zero);
         }
+
+        /// <summary>
+        /// Write method for textbox class
+        /// </summary>
+        /// <param name="t">textBox class</param>
+        /// <param name="value">string to write</param>
+        public static void Write(this TextBox t, string value)
+        {
+            t.AppendText(value);
+        }
+
+        /// <summary>
+        /// Writeline method for textbox class
+        /// </summary>
+        /// <param name="t">textBox class</param>
+        /// <param name="value">string to write</param>
+        public static void WriteLine(this TextBox t, string value)
+        {
+            t.AppendText(value + Environment.NewLine);
+        }
     }
 }
